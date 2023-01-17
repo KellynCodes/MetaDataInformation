@@ -6,6 +6,10 @@ namespace GettingMetaDataInfo.Implementation
 {
     public class MetaData : IMetaData
     {
+        [
+
+            Description("This method return the all the description and information in the assemblies illustrated by the default attribute.")
+        ]
         public void GetDocs()
         {
             var assemblies = AppDomain.CurrentDomain.GetAssemblies();
@@ -23,6 +27,8 @@ namespace GettingMetaDataInfo.Implementation
                             Console.WriteLine("Member Type: {0}", member.MemberType);
                             Console.WriteLine("Name: {0}", member.Name);
                             Console.WriteLine($"Description: {((DescriptionAttribute)attributes[0]).Description}");
+                            Console.WriteLine($"Input: {((DescriptionAttribute)attributes[0]).Input}");
+                            Console.WriteLine($"Output: {((DescriptionAttribute)attributes[0]).Output}");
                             Console.WriteLine();
                         }
                     }

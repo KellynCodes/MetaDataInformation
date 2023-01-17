@@ -9,7 +9,7 @@ namespace GettingMetaDataInfo.Implementation
     public class Docs : IDocs
     {
         [Description("This is the id of user.")]
-         public string? ID { get; set; }
+        public string? ID { get; set; }
 
         [Description("This properties is the Name of user.")]
         public string? Name { get; set; }
@@ -29,7 +29,15 @@ namespace GettingMetaDataInfo.Implementation
 
         }
 
-        [Description("This contructor sets the properties and to the value entered in the parameter of the contructor")]
+        [
+            Description
+            (
+           description: "This contructor sets the properties and to the value entered in the parameter of the contructor",
+           input: "This constructor takens in user information [Id, Name, Address, Gender, Religion and returns",
+            output: "User information accordingly as a string."
+            )
+
+        ]
         public Docs(string iD, string name, string address, string gender, string religion)
         {
             ID = iD;
@@ -40,14 +48,14 @@ namespace GettingMetaDataInfo.Implementation
         }
 
         [Description("This list holds information about users.")]
-       public List<Docs> users = new List<Docs>();
+        public List<Docs> users = new List<Docs>();
 
         [Description("This method adds the new user to the list and also display the user on the console.")]
         public void DisplayUser()
         {
             users.Add(new Docs("1", "Kelechi Amos", "Nsukka Enugu state, Nigeria", "Male", "Christainity"));
 
-            foreach(var user in users)
+            foreach (var user in users)
             {
                 Console.WriteLine($"{user.ID} | {user.Name} | {user.Gender} | {user.Address} | {user.Religion}");
             }
