@@ -4,6 +4,7 @@ using System;
 
 namespace GettingMetaDataInfo.Implementation
 {
+    [Description("This class holds all the implementation of getting information about the metat data.")]
     public class MetaData : IMetaData
     {
         [Description("This method return the all the description and information in the assemblies illustrated by the default attribute.")]
