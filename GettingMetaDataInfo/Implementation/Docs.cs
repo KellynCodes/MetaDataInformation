@@ -1,10 +1,12 @@
 ﻿using GettingMetaDataInfo.CustomAttribute;
+using GettingMetaDataInfo.Interface;
 using System;
 using System.Collections.Generic;
 
 namespace GettingMetaDataInfo.Implementation
 {
-    public class Docs
+    [Description("Class that holds user data.")]
+    public class Docs : IDocs
     {
         [Description("This is the id of user.")]
          public string? ID { get; set; }
@@ -21,11 +23,13 @@ namespace GettingMetaDataInfo.Implementation
         [Description("This properties is the country where the user comes from")]
         public string? Religion { get; set; }
 
-
+        [Description("This is a default constructor.")]
         public Docs()
         {
 
         }
+
+        [Description("This contructor sets the properties and to the value entered in the parameter of the contructor")]
         public Docs(string iD, string name, string address, string gender, string religion)
         {
             ID = iD;
@@ -35,7 +39,8 @@ namespace GettingMetaDataInfo.Implementation
             Religion = religion;
         }
 
-       public static List<Docs> users = new List<Docs>();
+        [Description("This list holds information about users.")]
+       public List<Docs> users = new List<Docs>();
 
         [Description("This method adds the new user to the list and also display the user on the console.")]
         public void DisplayUser()

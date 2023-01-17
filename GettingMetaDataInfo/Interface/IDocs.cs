@@ -2,6 +2,6 @@
 {
     public interface IDocs
     {
-        void Docs();
+        void DisplayUser();
     }
 }
