@@ -32,7 +32,7 @@ namespace GettingMetaDataInfo.Implementation
         [
             Description
             (
-           description: "This contructor sets the properties and to the value entered in the parameter of the contructor",
+           description: "This contructor sets the properties and the value entered in the parameter of the contructor",
            input: "This constructor takens in user information [Id, Name, Address, Gender, Religion and returns",
             output: "User information accordingly as a string."
             )
