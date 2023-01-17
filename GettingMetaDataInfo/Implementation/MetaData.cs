@@ -6,10 +6,7 @@ namespace GettingMetaDataInfo.Implementation
 {
     public class MetaData : IMetaData
     {
-        [
-
-            Description("This method return the all the description and information in the assemblies illustrated by the default attribute.")
-        ]
+        [Description("This method return the all the description and information in the assemblies illustrated by the default attribute.")]
         public void GetDocs()
         {
             var assemblies = AppDomain.CurrentDomain.GetAssemblies();

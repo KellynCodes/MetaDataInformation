@@ -10,7 +10,7 @@ namespace GettingMetaDataInfo.CustomAttribute
         public string? Input { get; set; }
         public string? Output { get; set; }
 
-        public DescriptionAttribute(string description, string input = null, string output = null)
+        public DescriptionAttribute(string description, string input = "Not Specified", string output = "Not Specified")
         {
             Description = description;
             Input = input;
